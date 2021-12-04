@@ -1,0 +1,53 @@
+{
+    "root": {
+        "data": {
+            "id": "cg6cb37gjag0",
+            "created": 1638603063194,
+            "text": "算法",
+            "expandState": "expand"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cg6cjmcx2p40",
+                    "created": 1638603731796,
+                    "text": "什么是算法",
+                    "expandState": "expand",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cg6cjqxuigw0",
+                            "created": 1638603741769,
+                            "text": "有限、确定、有效的适合计算机程序实现的解决问题的方法",
+                            "expandState": "expand",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cg6cmtfsq5c0",
+                    "created": 1638603982300,
+                    "text": "组织数据"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cg6cn7eo33k0",
+                            "created": 1638604012707,
+                            "text": "数据结构"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
