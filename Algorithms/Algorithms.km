@@ -44,6 +44,39 @@
                         "children": []
                     }
                 ]
+            },
+            {
+                "data": {
+                    "id": "cg6ls4gdxk00",
+                    "created": 1638629788090,
+                    "text": "递归"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cg6ls9zeba00",
+                            "created": 1638629800124,
+                            "text": "总有一个最简单的情况"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cg6lsmkmcv40",
+                            "created": 1638629827528,
+                            "text": "总是尝试解决一个规模更小的子问题"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cg6lt0q8xe00",
+                            "created": 1638629858344,
+                            "text": "递归调用的父问题和子问题不应该有交集"
+                        },
+                        "children": []
+                    }
+                ]
             }
         ]
     },
