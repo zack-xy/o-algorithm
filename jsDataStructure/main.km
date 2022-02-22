@@ -1,0 +1,79 @@
+{
+    "root": {
+        "data": {
+            "id": "ci2er4d10cw0",
+            "created": 1645516038807,
+            "text": "JavaScript数据结构与算法"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "ci2erqdb0pk0",
+                    "created": 1645516086713,
+                    "text": "数组",
+                    "note": "jsDataStructure\\jsArray.km"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "ci2ertx5ie00",
+                    "created": 1645516094444,
+                    "text": "栈"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "ci2erw6ow0o0",
+                    "created": 1645516099374,
+                    "text": "集合"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "ci2erzf9ze80",
+                    "created": 1645516106423,
+                    "text": "字典和散列表"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "ci2es2h2d3s0",
+                    "created": 1645516113062,
+                    "text": "树"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "ci2es69qvu80",
+                    "created": 1645516121327,
+                    "text": "图"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "ci2esimuiq80",
+                    "created": 1645516148240,
+                    "text": "队列"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "ci2esr5p1hc0",
+                    "created": 1645516166794,
+                    "text": "链表"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

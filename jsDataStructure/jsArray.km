@@ -1,0 +1,446 @@
+{
+    "root": {
+        "data": {
+            "id": "ci2evqlex280",
+            "created": 1645516400660,
+            "text": "数组"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "ci2eyqymp680",
+                    "created": 1645516636552,
+                    "text": "创建和初始化数组",
+                    "note": "```\nnew Array()\nnew Array(7)\nnew Array('Sunday','Monday')\nlet days = []\n```"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "ci2f0va1hgo0",
+                    "created": 1645516802677,
+                    "text": "访问和迭代数组"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "ci2f1k93fw00",
+                    "created": 1645516857040,
+                    "text": "添加元素"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ci2f1qebhps0",
+                            "created": 1645516870416,
+                            "text": "数组末尾插入元素"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ci2f1uz887s0",
+                                    "created": 1645516880388,
+                                    "text": "numbers[numbers.length] = 10"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2f2556yvs0",
+                                    "created": 1645516902516,
+                                    "text": "numbers.push(10)"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ci2f2h2i6vc0",
+                            "created": 1645516928475,
+                            "text": "数组开头插入元素"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ci2f2zhr6eo0",
+                                    "created": 1645516968579,
+                                    "text": "需要挪动元素",
+                                    "note": "```\nArray.prototype.insertFirstPosition = function(value) {\n\tfor(let i = this.length;i>=0;i--) {\n    \tthis[i] = this[i-1];\n    }\n    this[0] = value;\n}\n\nnumbers.insertFirstPosition(10)\n```"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2f5gt09fk0",
+                                    "created": 1645517162993,
+                                    "text": "numbers.unshift(10)"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "ci2f60gu8g00",
+                    "created": 1645517205793,
+                    "text": "删除元素"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ci2f66v6m0g0",
+                            "created": 1645517219721,
+                            "text": "数组末尾删除元素"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ci2f6bzft4w0",
+                                    "created": 1645517230862,
+                                    "text": "numbers.pop()"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ci2f6ndnfow0",
+                            "created": 1645517255666,
+                            "text": "数组开头删除元素"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ci2f71ep45c0",
+                                    "created": 1645517286204,
+                                    "text": "移动删除i第一个，创建新数组将不是undefined的复制到新数组",
+                                    "note": "```\nArray.prototype.reIndex = function(myArray) {\n\tconst newArray = [];\n    for(let i=0;i<myArray.length;i++) {\n    \tif(myArray[i]!==undefined) {\n        \tnewArray.push(myArray[i]);\n        }\n    }\n    return newArray;\n}\n\n// 手动移除第一个元素并重新排序\nArray.prototype.removeFirstPosition = function() {\n\tfor(let i=0;i<this.length;i++) {\n    \tthis[i] = this[i+1];\n    }\n    return this.reIndex(this);\n}\n\nnumbers = numbers.removeFirstPosition()\n```"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2fd5jklq00",
+                                    "created": 1645517765391,
+                                    "text": "numbers.shift()"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "ci2fe5moivc0",
+                    "created": 1645517843943,
+                    "text": "任意位置添加/删除元素"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ci2fel6kuzk0",
+                            "created": 1645517877798,
+                            "text": "splice()"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ci2fergciug0",
+                                    "created": 1645517891450,
+                                    "text": "3个参数：删除/插入元素索引、删除个数、添加到数组的值"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "ci2fhb1lwow0",
+                    "created": 1645518090822,
+                    "text": "数组方法参考",
+                    "expandState": "collapse"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ci2fhg3a1pk0",
+                            "created": 1645518101807,
+                            "text": "concat"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ci2fhku6cwg0",
+                            "created": 1645518112141,
+                            "text": "every"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ci2fhz9nulk0",
+                            "created": 1645518143552,
+                            "text": "filter"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ci2fi7l4xuo0",
+                            "created": 1645518161660,
+                            "text": "forEach"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ci2fia7db1c0",
+                            "created": 1645518167358,
+                            "text": "join"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ci2fic0paqo0",
+                            "created": 1645518171309,
+                            "text": "indexOf"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ci2fifdsnvk0",
+                            "created": 1645518178631,
+                            "text": "lastIndexOf"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ci2fikgf1n40",
+                            "created": 1645518189673,
+                            "text": "map"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ci2fimkxvmo0",
+                            "created": 1645518194300,
+                            "text": "reverse"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ci2fipvg08o0",
+                            "created": 1645518201466,
+                            "text": "slice"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ci2fiumkymo0",
+                            "created": 1645518211814,
+                            "text": "some"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ci2fiwew33c0",
+                            "created": 1645518215702,
+                            "text": "sort"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ci2g53rn6eo0",
+                                    "created": 1645519955722,
+                                    "text": "localeCompare"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ci2fiypwxko0",
+                            "created": 1645518220722,
+                            "text": "toString"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ci2fj4bijfk0",
+                            "created": 1645518232912,
+                            "text": "valueOf"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ci2fk9qd3cw0",
+                            "created": 1645518323058,
+                            "text": "reduce"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ci2fkddg2ao0",
+                                    "created": 1645518330984,
+                                    "text": "4个参数：prevoiusValue、currentValue、index、array"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ci2flzr0xcw0",
+                            "created": 1645518458059,
+                            "text": "ES2015\\ES2016新增"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ci2fmcumo740",
+                                    "created": 1645518486575,
+                                    "text": "@@interator",
+                                    "note": "```\nlet interator = numbers[Symbol.interator]();\nconsole.log(interator.next().value);  // 1\n```"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2fmkasnns0",
+                                    "created": 1645518502790,
+                                    "text": "copyWithin",
+                                    "note": "```\nlet numbers = [1,2,3,4,5,6];\n// 1参数：复制到哪个索引，后续参数，从哪个索引到哪个索引复制\nnumbers.copyWithin(0,3)\nconsole.log(numbers); // [4,5,6,4,5,6]\nlet numbers2 = [1,2,3,4,5,6];\nnumbers2.copyWithin(1,3,5);\nconsole.log(numbers2); // [1,4,5,4,5,6]\n```"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2fmqqglxc0",
+                                    "created": 1645518516798,
+                                    "text": "entries",
+                                    "note": "```\nlet numbers = [1,2,3,4,5,6,6,7,8]\nlet eEntries = numbers.entries()\nfor (const n of eEntries) {\n    console.log(n);  // [0,1]\n}\n```"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2fnb4tsaw0",
+                                    "created": 1645518561202,
+                                    "text": "keys"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2fngu0qiw0",
+                                    "created": 1645518573609,
+                                    "text": "values"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2fmuzbc540",
+                                    "created": 1645518526040,
+                                    "text": "includes"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2fmxawr5k0",
+                                    "created": 1645518531095,
+                                    "text": "find"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2fmypt0nk0",
+                                    "created": 1645518534172,
+                                    "text": "findIndex"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2fn2pwkcw0",
+                                    "created": 1645518542885,
+                                    "text": "fill",
+                                    "note": "```\nlet numbers = Array.of(1,2,3);\nnumbers.fill(0);\nconsole.log(numbers); // [0,0,0]\n// 指定索引\n// 第1个参数是填充值，第2个参数是索引\nnumbers.fill(8,1);\nconsole.log(numbers); // [0,8,8]\n```"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2fn2sy6200",
+                                    "created": 1645518543070,
+                                    "text": "from ",
+                                    "note": "```\nlet numbers = [1,2]\n// 创建新数组\nlet numbers2 = Array.from(numbers); \nconsole.log(numbers2);// [1,2]\n// 可以过滤\nlet evens = Array.from(numbers, x=>x%2 ==0);\nconsole.log(evens); //[false, true]\n\n```"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2fnd0qrgo0",
+                                    "created": 1645518565309,
+                                    "text": "of",
+                                    "note": "```\nlet numbers = [1,2]\n// 复制数组\nlet numbers2 = Array.of(...numbers)\nconsole.log(numbers2);  // [1,2]\n\n```"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "ci2g7lohog80",
+                    "created": 1645520151442,
+                    "text": "类型数组"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ci2g7slrnm80",
+                            "created": 1645520166515,
+                            "text": "存储单一类型的数据"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ci2g8cncrtc0",
+                                    "created": 1645520210147,
+                                    "text": "Int8Array........"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

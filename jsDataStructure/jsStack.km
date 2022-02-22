@@ -1,0 +1,67 @@
+{
+    "root": {
+        "data": {
+            "id": "ci2gb1imwsg0",
+            "created": 1645520421009,
+            "text": "栈"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "ci2gc5ubv140",
+                    "created": 1645520508787,
+                    "text": "后进先出"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ci2gchagqiw0",
+                            "created": 1645520533708,
+                            "text": "新元素靠近栈顶，就元素接近栈底"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "ci2gli4r76w0",
+                    "created": 1645521240817,
+                    "text": "数组栈实现",
+                    "hyperlink": "https://gitee.com/zackzhengxy/o-bricks/tree/main/demoCodes/jsDataStructure/jsArrayStack.js",
+                    "hyperlinkTitle": ""
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ci2gn3vsumo0",
+                            "created": 1645521366529,
+                            "text": "问题 "
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ci2gndjia1s0",
+                                    "created": 1645521387553,
+                                    "text": "数组大部分方法时间复杂度是O(n)"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2gnufgn3c0",
+                                    "created": 1645521424314,
+                                    "text": "数组是一个有序集合，占用更多内存空间"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
