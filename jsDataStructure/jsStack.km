@@ -58,6 +58,72 @@
                         ]
                     }
                 ]
+            },
+            {
+                "data": {
+                    "id": "ci2ndh5q2aw0",
+                    "created": 1645540359555,
+                    "text": "对象栈实现",
+                    "hyperlink": "https://gitee.com/zackzhengxy/o-bricks/tree/main/demoCodes/jsDataStructure/jsObjectStack.js",
+                    "hyperlinkTitle": ""
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ci2nmooon3k0",
+                            "created": 1645541081216,
+                            "text": "除toString方法外，其他方法复杂度为O(1)"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ci2np489b4g0",
+                            "created": 1645541271780,
+                            "text": "改代码没有实现私有属性"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ci2nqg4zv5k0",
+                                    "created": 1645541376068,
+                                    "text": "方案1：",
+                                    "note": "```\n\n// 使用下划线约定标记一个属性为私有属性\n// 约定俗成，并不能保护数据\nclass Stack {\n\tconstructor() {\n\t\tthis._count = 0\n        this._items = {}\n\t}\n}\n\n```"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2nst56c5c0",
+                                    "created": 1645541561105,
+                                    "text": "方案2：",
+                                    "note": "```\n// 使用Symbol基本类型作为属性\n// 但是依然会被Object.getOwnPropertySymbols获取到\nconst _items = Symbol('stackItems')\nclass Stack {\n\tconstructor() {\n    \tthis[_items] = []\n    }\n}\n\n```"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ci2nunx8hsw0",
+                                    "created": 1645541706470,
+                                    "text": "方案3：使用WeakMap实现类",
+                                    "note": null,
+                                    "hyperlink": "https://gitee.com/zackzhengxy/o-bricks/tree/main/demoCodes/jsDataStructure/jsWeakMapStack.js",
+                                    "hyperlinkTitle": ""
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "ci2nxsdo1s80",
+                                            "created": 1645541951263,
+                                            "text": "问题是可读性差，且扩展该类时无法继承私有属性"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
