@@ -59,7 +59,8 @@
                 "data": {
                     "id": "ci2esimuiq80",
                     "created": 1645516148240,
-                    "text": "队列"
+                    "text": "队列",
+                    "note": "jsDataStructure\\jsQueue.km"
                 },
                 "children": []
             },
