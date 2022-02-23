@@ -23,8 +23,3 @@ js的算法实现
 ![开启知识的大门](./images/emoji/9.jpg)
 
 ![开启知识的大门](./images/emoji/10.jpg)
-
-
------
-
-# [链表](./infos/linkedList.md)
