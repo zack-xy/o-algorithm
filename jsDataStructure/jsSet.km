@@ -1,0 +1,113 @@
+{
+    "root": {
+        "data": {
+            "id": "ci95auf3eow0",
+            "created": 1646200293045,
+            "text": "集合"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "ci95b8abae00",
+                    "created": 1646200323231,
+                    "text": "一组无序且唯一的项组成"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ci95ocf75k00",
+                            "created": 1646201350968,
+                            "text": "集合的重要应用就是数据库。SQL联接的基础是集合运算"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "ci96aewlhts0",
+                    "created": 1646203080385,
+                    "text": "集合实现",
+                    "layout_right_offset": {
+                        "x": 21,
+                        "y": 18
+                    },
+                    "hyperlink": "https://gitee.com/zackzhengxy/o-bricks/tree/main/demoCodes/jsDataStructure/jsSet.js",
+                    "hyperlinkTitle": ""
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "ci95p6nk2uw0",
+                    "created": 1646201416777,
+                    "text": "集合运算"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ci95pej2qsg0",
+                            "created": 1646201433920,
+                            "text": "并集"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ci968dbtkns0",
+                                    "created": 1646202920224,
+                                    "text": "new Set([...setA,...setB])"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ci95piax20g0",
+                            "created": 1646201442134,
+                            "text": "交集"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ci968p1hq3k0",
+                                    "created": 1646202945720,
+                                    "text": "new Set([...setA].filter(x=>setB.has(x)))"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ci95plftqxk0",
+                            "created": 1646201448961,
+                            "text": "差集"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ci9695pmhx40",
+                                    "created": 1646202982008,
+                                    "text": "new Set([...setA].filter(x => !setB.has(x)))"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ci95pnqiv2g0",
+                            "created": 1646201453961,
+                            "text": "子集"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

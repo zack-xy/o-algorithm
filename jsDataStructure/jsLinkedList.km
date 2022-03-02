@@ -52,6 +52,26 @@
                         "children": []
                     }
                 ]
+            },
+            {
+                "data": {
+                    "id": "ci9ey7bjrzc0",
+                    "created": 1646227513494,
+                    "text": "有序链表",
+                    "hyperlink": "https://gitee.com/zackzhengxy/o-bricks/tree/main/demoCodes/jsDataStructure/jsSortedLinkedList.js",
+                    "hyperlinkTitle": ""
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "ci9eymyo7ls0",
+                    "created": 1646227547544,
+                    "text": "链表实现栈",
+                    "hyperlink": "https://gitee.com/zackzhengxy/o-bricks/tree/main/demoCodes/jsDataStructure/jsStackLinkedList.js",
+                    "hyperlinkTitle": ""
+                },
+                "children": []
             }
         ]
     },
