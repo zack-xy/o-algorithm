@@ -1,0 +1,396 @@
+{
+    "root": {
+        "data": {
+            "id": "ciaxit9ui940",
+            "created": 1646381468499,
+            "text": "树"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "ciaxj32l1gg0",
+                    "created": 1646381489827,
+                    "text": "存储需要快速查找的数据"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "ciaxobr2bzs0",
+                    "created": 1646381900543,
+                    "text": "二叉树"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ciaxoi294xk0",
+                            "created": 1646381914280,
+                            "text": "最多只能有两个子节点"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciaxowxse3k0",
+                            "created": 1646381946662,
+                            "text": "二叉搜索树",
+                            "hyperlink": "https://gitee.com/zackzhengxy/o-brikcs/tree/main/demoCodes/jsDataStructure/jsBinarySearchTree.js",
+                            "hyperlinkTitle": ""
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ciaxp1s1nnc0",
+                                    "created": 1646381957198,
+                                    "text": "左侧节点比父节点小、右侧节点比父节点大"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cift6sr3vmo0",
+                            "created": 1646877042339,
+                            "text": "AVL树",
+                            "hyperlink": "https://gitee.com/zackzhengxy/o-bricks/tree/main/demoCodes/jsDataStructure/jsAVLTree.js",
+                            "hyperlinkTitle": ""
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cifuxrk0yj40",
+                                    "created": 1646881976677,
+                                    "text": "自平衡二叉搜索树"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cift6wx11ps0",
+                                    "created": 1646877051404,
+                                    "text": "任意1个节点的左侧树和右侧树高度最多相差1"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cift9cd3zg80",
+                                    "created": 1646877241757,
+                                    "text": "术语"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cift9ezuty80",
+                                            "created": 1646877247486,
+                                            "text": "节点高度"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cift9z5nn400",
+                                                    "created": 1646877291372,
+                                                    "text": "从节点到其任意子节点的边的最大值(不含自身)"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cifth9sxx2w0",
+                                            "created": 1646877863097,
+                                            "text": "平衡因子"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cifthck1ffc0",
+                                                    "created": 1646877869089,
+                                                    "text": "每个节点计算右子树高度(hr)和左子树高度(hl)之间的差值，该值(hr-hl)应为0、1或-1，如果不是这三个值之一，则需要平衡该AVL树"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cifttughfpc0",
+                                            "created": 1646878848426,
+                                            "text": "平衡操作(AVL旋转)"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "ciftu3lwe0g0",
+                                                    "created": 1646878868345,
+                                                    "text": "左-左（LL）：向右的单旋转"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ciftw21un7c0",
+                                                            "created": 1646879021684,
+                                                            "text": "节点左侧子节点的高度大于右侧子节点的高度，并且左侧子节点是平衡或左侧较重"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ciftufmnn200",
+                                                    "created": 1646878894512,
+                                                    "text": "右-右（RR）：向左的单旋转"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cifu1fe2diw0",
+                                                            "created": 1646879442542,
+                                                            "text": "右侧节点的高度大于左侧节点的高度，并且右侧节点是平衡或右侧较重"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ciftur62tpc0",
+                                                    "created": 1646878919631,
+                                                    "text": "左-右(LR): 向右的双旋转（先RR旋转，再LL旋转）"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cifu3zkfx3k0",
+                                                            "created": 1646879643191,
+                                                            "text": "左侧子节点的高度大于右侧子节点的高度，左侧子节点右侧较重"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ciftv92nsx40",
+                                                    "created": 1646878958606,
+                                                    "text": "右-左(RL):向左的双旋转（先LL旋转，再RR旋转）"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cifudfjrsxk0",
+                                                            "created": 1646880383257,
+                                                            "text": "右侧子节点的高度大于左侧子节点的高度，并且右侧子节点左侧较重"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cifuxln5u400",
+                            "created": 1646881963805,
+                            "text": "红黑树",
+                            "hyperlink": "https://gitee.com/zackzhengxy/o-bricks/tree/main/demoCodes/jsDataStructure/jsRedBlackTree.js",
+                            "hyperlinkTitle": ""
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cifuy305dyo0",
+                                    "created": 1646882001596,
+                                    "text": "自平衡二叉搜索树"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cifuyjib77c0",
+                                            "created": 1646882037523,
+                                            "text": "因插入和删除AVL树会旋转，所以多删除和插入，则红黑树好，多查询和搜索，则AVL树好"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cifuzv2svts0",
+                                    "created": 1646882141071,
+                                    "text": "规则",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cifv000hwq80",
+                                            "created": 1646882151815,
+                                            "text": "每个节点不是黑的就是红的"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cifv06fr6400",
+                                            "created": 1646882165798,
+                                            "text": "树的根节点是黑的"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cifv0cx9bjs0",
+                                            "created": 1646882179917,
+                                            "text": "所有叶子节点是黑的"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cifv0iz5ou00",
+                                            "created": 1646882193093,
+                                            "text": "如果1个节点是红的，子节点是黑的"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cifv0x3qbfk0",
+                                            "created": 1646882223844,
+                                            "text": "不能有相邻的红节点，红节点不能有红父或红子"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cifv1qwyd480",
+                                            "created": 1646882288738,
+                                            "text": "某个节点到子节点的所有路径包含相同数量黑节点"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cifzqef5vqw0",
+                    "created": 1646895505085,
+                    "text": "二叉堆",
+                    "hyperlink": "https://gitee.com/zackzhengxy/o-bricks/tree/main/demoCodes/jsDataStructure/jsMinHeap.js",
+                    "hyperlinkTitle": ""
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cifzqpfiw5s0",
+                            "created": 1646895529052,
+                            "text": "能高效快速的找出最大值和最小值，常应用于优先队列或堆排序算法"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cifzrltrpc80",
+                            "created": 1646895599570,
+                            "text": "特性"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cifzrpyqh7k0",
+                                    "created": 1646895608577,
+                                    "text": "是一棵完全二叉树"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cifzs9mygps0",
+                                            "created": 1646895651400,
+                                            "text": "树的每一层都有左侧和右侧子节点（除最后一层叶子），且叶子都尽可能是左侧子节点(倒数第2层可以只有左侧？)"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cifzt6b8b4o0",
+                                            "created": 1646895722525,
+                                            "text": "二叉堆不是最小堆就是最大堆"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cifzthqxvi80",
+                                                    "created": 1646895747420,
+                                                    "text": "所有节点都大于等于(最大堆)或小于等于(最小堆)"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cifzw5vk1v40",
+                                            "created": 1646895956670,
+                                            "text": "二叉堆是二叉树，但不一定是二叉搜索树(BST)"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cig3212rj8o0",
+                            "created": 1646904879737,
+                            "text": "堆排序算法",
+                            "hyperlink": "https://gitee.com/zackzhengxy/o-bricks/tree/main/demoCodes/jsDataStructure/jsHeapSort.js",
+                            "hyperlinkTitle": ""
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cig32kjyz2o0",
+                                    "created": 1646904922136,
+                                    "text": "1.数组创建1个最大堆用作数据源"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cig32znbvts0",
+                                    "created": 1646904954991,
+                                    "text": "2.创建最大堆后，最大的值被存储在堆的第一个位置。将它替换为堆最后一个值，将堆的大小减1"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cig33ujl4iw0",
+                                    "created": 1646905022245,
+                                    "text": "3.最后，将堆的根节点下移并重复步骤2直到堆的大小为1"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
