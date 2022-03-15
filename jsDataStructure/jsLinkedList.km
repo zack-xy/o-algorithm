@@ -22,7 +22,18 @@
                     "hyperlink": "https://gitee.com/zackzhengxy/o-bricks/tree/main/demoCodes/jsDataStructure/jsLinkedList.js",
                     "hyperlinkTitle": ""
                 },
-                "children": []
+                "children": [
+                    {
+                        "data": {
+                            "id": "cikh4l0zsns0",
+                            "created": 1647350815259,
+                            "text": "数组实现链表",
+                            "hyperlink": "https://gitee.com/zackzhengxy/o-bricks/tree/main/demoCodes/jsDataStructure/jsLinkedList2.js",
+                            "hyperlinkTitle": ""
+                        },
+                        "children": []
+                    }
+                ]
             },
             {
                 "data": {
