@@ -11,10 +11,35 @@
                 "data": {
                     "id": "ci3gklnyz480",
                     "created": 1645622730102,
-                    "text": "JavaScript数据结构与算法",
+                    "text": "JavaScript数据结构",
                     "note": "jsDataStructure\\main.km"
                 },
                 "children": []
+            },
+            {
+                "data": {
+                    "id": "ciplsl6xto00",
+                    "created": 1647871780581,
+                    "text": "链表算法"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ciplt7l9sag0",
+                            "created": 1647871829337,
+                            "text": "什么时候该用虚拟头节点：当链表头节点的地址有可能改变的时候"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciplsqkqcjc0",
+                            "created": 1647871792299,
+                            "text": "LeetCode：19、24、25、61、82、83、92、141、142、202、206"
+                        },
+                        "children": []
+                    }
+                ]
             }
         ]
     },
