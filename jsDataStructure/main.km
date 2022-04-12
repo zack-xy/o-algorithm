@@ -11,7 +11,11 @@
                     "id": "ci2erqdb0pk0",
                     "created": 1645516086713,
                     "text": "数组",
-                    "note": "jsDataStructure\\jsArray.km"
+                    "note": "jsDataStructure\\jsArray.km",
+                    "font-weight": "bold",
+                    "resource": [
+                        "关联数组"
+                    ]
                 },
                 "children": []
             },
@@ -20,7 +24,10 @@
                     "id": "ci2ertx5ie00",
                     "created": 1645516094444,
                     "text": "栈",
-                    "note": "jsDataStructure\\jsStack.km"
+                    "note": "jsDataStructure\\jsStack.km",
+                    "resource": [
+                        "关联数组"
+                    ]
                 },
                 "children": []
             },
@@ -29,7 +36,10 @@
                     "id": "ci2erw6ow0o0",
                     "created": 1645516099374,
                     "text": "集合",
-                    "note": "jsDataStructure\\jsMap.km"
+                    "note": "jsDataStructure\\jsMap.km",
+                    "resource": [
+                        "关联数组"
+                    ]
                 },
                 "children": []
             },
@@ -38,7 +48,10 @@
                     "id": "ci2erzf9ze80",
                     "created": 1645516106423,
                     "text": "字典和散列表",
-                    "note": "jsDataStructure\\jsMap.km"
+                    "note": "jsDataStructure\\jsMap.km",
+                    "resource": [
+                        "关联数组"
+                    ]
                 },
                 "children": []
             },
@@ -47,7 +60,10 @@
                     "id": "ci2es2h2d3s0",
                     "created": 1645516113062,
                     "text": "树",
-                    "note": "jsDataStructure\\jsTree.km"
+                    "note": "jsDataStructure\\jsTree.km",
+                    "resource": [
+                        "关联数组"
+                    ]
                 },
                 "children": []
             },
@@ -56,7 +72,10 @@
                     "id": "ci2es69qvu80",
                     "created": 1645516121327,
                     "text": "图",
-                    "note": "jsDataStructure\\jsGraph.km"
+                    "note": "jsDataStructure\\jsGraph.km",
+                    "resource": [
+                        "关联数组"
+                    ]
                 },
                 "children": []
             },
@@ -65,7 +84,10 @@
                     "id": "ci2esimuiq80",
                     "created": 1645516148240,
                     "text": "队列",
-                    "note": "jsDataStructure\\jsQueue.km"
+                    "note": "jsDataStructure\\jsQueue.km",
+                    "resource": [
+                        "关联数组"
+                    ]
                 },
                 "children": []
             },
@@ -74,7 +96,10 @@
                     "id": "ci2esr5p1hc0",
                     "created": 1645516166794,
                     "text": "链表",
-                    "note": "jsDataStructure\\jsLinkedList.km"
+                    "note": "jsDataStructure\\jsLinkedList.km",
+                    "resource": [
+                        "关联数组"
+                    ]
                 },
                 "children": []
             }
