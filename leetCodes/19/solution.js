@@ -12,8 +12,8 @@
  */
 // 解法：删除倒数n节点，需要找到其前一个节点即倒数n+1个节点
 // 设置虚拟头结点：两个指针p、q，当p和q距离为n时，q在后到null时，p为n+1个节点
-var removeNthFromEnd = function (head, n) {
-  let vHead = new ListNode(0, head)
+const removeNthFromEnd = function (head, n) {
+  const vHead = new ListNode(0, head)
   let p = vHead
   let q = head
   while (n--) q = q.next
@@ -23,4 +23,4 @@ var removeNthFromEnd = function (head, n) {
   }
   p.next = p.next.next
   return vHead.next
-};
+}
