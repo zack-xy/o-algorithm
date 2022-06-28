@@ -1,3 +1,6 @@
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
