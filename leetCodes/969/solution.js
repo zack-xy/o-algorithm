@@ -24,10 +24,16 @@ const pancakeSort = function (arr) {
   const ret = []
   for (let i = 0; i < arr.length; i++) ind[arr[i]] = i
   for (let i = arr.length; i >= 1; i--) {
-    ret.push(ind[i] + 1)
-    reverse(arr, ind[i] + 1, ind)
-    ret.push(i)
-    reverse(arr, i, ind)
+    if (ind[i] === i - 1)
+      continue
+    if (ind[i] + 1 !== 1) {
+      ret.push(ind[i] + 1)
+      reverse(arr, ind[i] + 1, ind)
+    }
+    if (i !== 1) {
+      ret.push(i)
+      reverse(arr, i, ind)
+    }
   }
   return ret
 }
