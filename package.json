@@ -1,0 +1,26 @@
+{
+  "name": "o-algorithm",
+  "version": "1.0.0",
+  "description": "## Algorithms 《算法 第四版》",
+  "author": "zack zheng",
+  "license": "ISC",
+  "homepage": "https://github.com/zack-xy/o-algorithm#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zack-xy/o-algorithm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zack-xy/o-algorithm/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "typescript": "^4.9.3"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.33.1",
+    "eslint": "^8.29.0"
+  }
+}
