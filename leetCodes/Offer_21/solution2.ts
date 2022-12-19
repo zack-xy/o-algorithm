@@ -13,9 +13,10 @@ function exchange(nums: number[]): number[] {
     while (x < nums.length && nums[x] % 2) x++
     while (y >= 0 && nums[y] % 2 === 0) y--
     if (x <= y) {
-      swap(nums[x], nums[y])
+      swap(x, y)
       x++
       y--
     }
   } while (x <= y)
+  return nums
 }
