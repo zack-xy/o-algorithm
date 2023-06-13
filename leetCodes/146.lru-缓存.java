@@ -8,6 +8,8 @@ public class LRUCache {
         public DLinkedNode(int _key, int _value) {key = _key; value = _value;}
     }
 
+    // Java的HashMap是无顺序的
+    // TreeMap，或者使用LinkedHashMap。LinkedHashMap继承了HashMap的功能，并且保持了插入顺序
     private Map<Integer, DLinkedNode> cache = new HashMap<Integer, DLinkedNode>();
     private int size;
     private int capacity;

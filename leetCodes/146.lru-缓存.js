@@ -10,6 +10,8 @@
  */
 
 // 使用js自带的数据结构Map
+// 因为js中的Map是有插入顺序的
+// Java的HashMap没有插入顺序，就需要其他数据结构（双向链表）辅助
 var LRUCache = function(capacity) {
   this.cache = new Map()
   this.max = capacity
