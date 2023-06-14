@@ -82,7 +82,7 @@ public class MyArray<E> {
         for (int i = idx + 1; i < size; i++) data[i - 1] = data[i];
         size--;
         data[size] = null;
-        if(size == data.length / 2) resize(data.length / 2); // 缩小数组
+        if(size == data.length / 4 && data.length / 2 != 0) resize(data.length / 2); // 缩小数组
         return ret;
     }
 
