@@ -47,7 +47,7 @@ class MyArray<E> {
 
     public contains(e: E):boolean {
         for (let i = 0; i < this.size; i++) {
-            if(this.data[i] == e) return true;
+            if(this.data[i] === e) return true;
         }
         return false;
     }
@@ -71,7 +71,7 @@ class MyArray<E> {
 
     public find(e: E): number {
         for (let i = 0; i < this.size; i++) {
-            if(this.data[i] == e) return i
+            if(this.data[i] === e) return i
         }
         return -1;
     }
