@@ -57,7 +57,8 @@ class MyArray<E> {
         let ret = this.data[idx];
         for (let i = idx + 1; i < this.size; i++) this.data[i - 1] = this.data[i];
         this.size--;
-        if(this.size === this.data.length / 2) this.resize(this.data.length / 2); // 缩小数组
+        // TODO 避免复杂度震荡
+        if(this.size === this.data.length / 4) this.resize(this.data.length / 2); // 缩小数组
         return ret
     }
 
