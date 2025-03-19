@@ -1,4 +1,4 @@
-package dataStructure.列表;
+package dataStructure.队列;
 
 public class Queue {
     int SIZE = 5;
