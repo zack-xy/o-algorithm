@@ -1,4 +1,19 @@
-import ListNode from "./findFirstCommonNodeBySet";
+import ListNode from "dataStructure/链表/ListNode";
+
+function findFirstCommonNodeBySet(headA: ListNode | null, headB: ListNode | null): ListNode | null  {
+  const set = new Set<ListNode>();
+  while(headA !== null) {
+    set.add(headA);
+    headA = headA.next;
+  }
+
+  while(headB !== null) {
+    if(set.has(headB)) return headB;
+    headB = headB.next;
+  }
+  return null;
+}
+
 
 function findFirstCommonNodeByStack(headA: ListNode | null, headB: ListNode | null): ListNode | null {
   const stackA: ListNode[] = [];

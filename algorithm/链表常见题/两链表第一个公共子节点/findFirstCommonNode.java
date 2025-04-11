@@ -3,16 +3,9 @@ package algorithm.链表常见题.两链表第一个公共子节点;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
+import dataStructure.链表.ListNode;
 
-public class ListNode {
-    public int val;
-    public ListNode next;
-
-    ListNode(int x) {
-        val = x;
-        next = null;
-    }
-
+public class findFirstCommonNode {
     // 使用哈希和集合处理
     public ListNode findFirstCommonNodeBySet(ListNode headA, ListNode headB) {
         Set<ListNode> set = new HashSet<ListNode>();
@@ -53,5 +46,3 @@ public class ListNode {
         return preNode;
     }
 }
-
-

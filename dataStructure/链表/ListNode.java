@@ -1,8 +1,8 @@
 package dataStructure.链表;
 
 public class ListNode {
-    private int data;
-    private ListNode next;
+    public int data;
+    public ListNode next;
     public ListNode(int data) {
         this.data = data;
     }
