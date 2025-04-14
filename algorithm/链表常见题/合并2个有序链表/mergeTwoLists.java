@@ -4,6 +4,7 @@ import dataStructure.链表.ListNode;
 
 public class mergeTwoLists {
 
+    // 解法一：代码一
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode newHead = new ListNode(-1);
         ListNode res = newHead;
@@ -37,7 +38,7 @@ public class mergeTwoLists {
         return res.next;
     }
 
-    // 精简代码优化一
+    // 解法一：精简代码优化一
     public ListNode mergeTwoLists2(ListNode list1, ListNode list2) {
         ListNode newHead = new ListNode(-1);
         ListNode res = newHead;
@@ -72,7 +73,7 @@ public class mergeTwoLists {
         return res.next;
     }
 
-    // 精简代码优化二
+    // 解法一：精简代码优化二
     public ListNode mergeTwoLists3(ListNode list1, ListNode list2) {
         ListNode prehead = new ListNode(-1);
         ListNode prev = prehead;

@@ -1,5 +1,6 @@
 import ListNode from "dataStructure/链表/ListNode";
 
+// 解法一：
 function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
   let preHead: ListNode = new ListNode(-1);
   let pre: ListNode = preHead;

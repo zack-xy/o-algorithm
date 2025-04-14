@@ -12,3 +12,6 @@
 最后将非空的链表添加到当前链表中    
 返回虚拟头节点的下一个节点     
 复杂度: O(n)     
+
+[Java代码](./mergeTwoLists.java)   
+[TypeScript代码](./mergeTwoLists.ts)    
