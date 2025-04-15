@@ -27,4 +27,6 @@ fast指针遍历到k+1个节点，slow指向第一个节点，此时二者间隔
 
 [61. 旋转链表](https://leetcode.cn/problems/rotate-list/description/)
 
+⚠️这里的快慢指针，注意循环的条件，一个fast走到null，一个是fast的next走到null
+
 [Java代码](./rotateRight.java)
