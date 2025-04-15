@@ -2,6 +2,12 @@ package algorithm.链表常见题.合并K个链表;
 
 import dataStructure.链表.ListNode;
 
+/**
+ * [LCR 078. 合并 K 个升序链表](https://leetcode.cn/problems/vvXgSW/description/)
+ *  [23. 合并 K 个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/description/)
+ * 
+ */
+
 public class mergeKLists {
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode res = null;

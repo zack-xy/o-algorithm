@@ -2,6 +2,22 @@ package algorithm.链表常见题.合并2个有序链表;
 
 import dataStructure.链表.ListNode;
 
+/**
+ * [1669. 合并两个链表](https://leetcode.cn/problems/merge-in-between-linked-lists/description/)
+ * 
+ * ##### 解法一：
+ * 
+    1、需要找到链表list1的a节点的上一个节点（从这里断开链接链表list2
+    2、需要找到链表list1的b节点的下一个节点（从这里链接list2的尾部
+    所以需要3个变量，1个指向a节点的上一个节点，1个指向b节点的下一个节点，1个指向list2的尾部
+    变量1.next = list2的头节点
+    list2的尾部.next = 变量2
+    另外需要i，j两个变量，用来计数到a和b位置
+
+ * 
+ * 
+ */
+
 public class mergeInBetween {
     public ListNode mergeInBetween(ListNode list1, int a, int b, ListNode list2) {
         ListNode pre1 = list1, post1 = list1, post2 = list2;
