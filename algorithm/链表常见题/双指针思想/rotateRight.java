@@ -2,6 +2,13 @@ package algorithm.链表常见题.双指针思想;
 
 import dataStructure.链表.ListNode;
 
+/**
+ * [61. 旋转链表](https://leetcode.cn/problems/rotate-list/description/)
+ * 
+ * ⚠️这里的快慢指针，注意循环的条件，一个fast走到null，一个是fast的next走到null
+ * 
+ */
+
 public class rotateRight {
     public ListNode rotateRight(ListNode head, int k) {
         if(head == null || k == 0) return head;

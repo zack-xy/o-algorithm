@@ -3,6 +3,13 @@ package algorithm.链表常见题.判断链表是否存在回文序列;
 import java.util.Stack;
 import dataStructure.链表.ListNode;
 
+/**
+ * 
+ * https://leetcode.cn/problems/palindrome-linked-list/description/
+ * 
+ * 
+ */
+
 public class isPalindrome {
     public boolean isPalindrome(ListNode head) {
         ListNode temp = head;

@@ -1,1 +1,0 @@
-https://leetcode.cn/problems/palindrome-linked-list/description/

@@ -5,6 +5,12 @@ import java.util.Set;
 import java.util.Stack;
 import dataStructure.链表.ListNode;
 
+/**
+ * 
+ * https://leetcode.cn/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/description/
+ * 
+ */
+
 public class findFirstCommonNode {
     // 使用哈希和集合处理
     public ListNode findFirstCommonNodeBySet(ListNode headA, ListNode headB) {
