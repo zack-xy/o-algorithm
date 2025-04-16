@@ -1,0 +1,28 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug TS with Path Alias",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/algorithm/链表元素删除/removeElements.ts",
+      "runtimeArgs": [
+        "--loader", "ts-node/esm",
+        "-r", "tsconfig-paths/register" // 加载路径别名解析
+      ],
+      "sourceMaps": true,
+      "outFiles": [],
+      "resolveSourceMapLocations": [  // 显式指定 Source Map 搜索范围
+         "${workspaceFolder}/**",
+         "!**/node_modules/**"
+      ],
+      "env": {
+        "TS_NODE_PROJECT": "${workspaceFolder}/tsconfig.json" // 指定 tsconfig 路径
+      }
+    }
+  ]
+}
