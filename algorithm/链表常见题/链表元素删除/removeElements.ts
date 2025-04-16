@@ -1,7 +1,5 @@
 import ListNode from "dataStructure/链表/ListNode"
 
-// import ListNode from "../../../dataStructure/链表/ListNode";
-
 function removeElements2(head: ListNode, val: number): ListNode {
     let dummyHead: ListNode = new ListNode(0)
     dummyHead.next = head
@@ -28,3 +26,5 @@ let linkedlist = new ListNode(1,
 
 
 removeElements2(linkedlist, 6)
+
+console.log("检查一下ts是不是运行了")

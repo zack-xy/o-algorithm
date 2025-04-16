@@ -5,6 +5,7 @@
   "author": "zack zheng",
   "license": "ISC",
   "homepage": "https://github.com/zack-xy/o-algorithm#readme",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zack-xy/o-algorithm.git"
@@ -16,12 +17,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "tsconfig-paths": "^4.2.0"
-  },
   "devDependencies": {
     "@types/node": "^22.14.1",
-    "ts-node": "^10.9.2",
     "typescript": "^4.9.3"
   }
 }
