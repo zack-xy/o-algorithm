@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Debug TS with TSX",
       "runtimeExecutable": "tsx",
-      "args": "${workspaceFolder}/demoFn/demo.ts",
+      "args": "${workspaceFolder}/dist/removeElements.ts",
       "sourceMaps": true,
       "resolveSourceMapLocations": [
         "${workspaceFolder}/**",
