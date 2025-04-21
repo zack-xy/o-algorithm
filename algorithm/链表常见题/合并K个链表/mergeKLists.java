@@ -2,6 +2,9 @@ package algorithm.链表常见题.合并K个链表;
 
 import dataStructure.链表.ListNode;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 /**
  * [LCR 078. 合并 K 个升序链表](https://leetcode.cn/problems/vvXgSW/description/)
  *  [23. 合并 K 个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/description/)
@@ -9,6 +12,8 @@ import dataStructure.链表.ListNode;
  */
 
 public class mergeKLists {
+
+    // 解法一：循环合并2个链表
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode res = null;
         for (ListNode list : lists) {
@@ -32,5 +37,54 @@ public class mergeKLists {
         }
         cur.next = list1 == null ? list2 : list1;
         return preHead.next;
+    }
+
+    // 解法二：分治合并（优化一）
+    public ListNode mergeKLists2(ListNode[] lists) {
+        return merge(lists, 0, lists.length - 1);
+    }
+
+    public ListNode merge(ListNode[] lists, int l, int r) {
+        if (l == r) return lists[l];
+        if (l > r) return null;
+        int mid = (l + r) >> 1;
+        return mergeTwoLists(merge(lists, l, mid), merge(lists, mid+1, r));
+    }
+
+    // 解法三：优先队列
+    class Status implements Comparable<Status> {
+        int val;
+        ListNode ptr;
+
+        Status(int val, ListNode ptr) {
+            this.val = val;
+            this.ptr = ptr;
+        }
+
+        public int compareTo(Status status2) {
+            return this.val - status2.val;
+        }
+    }
+
+    PriorityQueue<Status> queue = new PriorityQueue<Status>();
+
+
+    public ListNode mergeKLists3(ListNode[] lists) {
+        for (ListNode node : lists) {
+            if (node != null) {
+                queue.offer(new Status(node.val, node));
+            }
+        }
+        ListNode head = new ListNode(0);
+        ListNode tail = head;
+        while (!queue.isEmpty()) {
+            Status f = queue.poll();
+            tail.next = f.ptr;
+            tail = tail.next;
+            if (f.ptr.next != null) {
+                queue.offer(new Status(f.ptr.next.val, f.ptr.next));
+            }
+        }
+        return head.next;
     }
 }
