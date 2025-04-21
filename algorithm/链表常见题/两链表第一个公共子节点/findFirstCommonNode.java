@@ -21,6 +21,14 @@ import dataStructure.链表.ListNode;
  *  BA拼接：a-b-4-5-0-1-2-3-4-5
  *
  *  AB和BA从4开始相同，4就是要找的节点
+ * 
+ *  原理：
+ *  A链表：al+ar
+ *  B链表：bl+br
+ *  AB链表：al+ar+bl+br
+ *  BA链表：bl+br+al+ar
+ *  上面ar和br是一样的，所以AB链表和BA链表等长且最后一小段一定重复
+ *  
  *
  *
  *  解法四：差和双指针
