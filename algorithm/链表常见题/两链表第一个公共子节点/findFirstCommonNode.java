@@ -9,36 +9,10 @@ import dataStructure.链表.ListNode;
  * 
  * https://leetcode.cn/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/description/
  *
- *  解法一：使用哈希和集合处理
- *
- *  解法二：使用栈解决
- *
- *  解法三：拼接字符串
- *  解释：
- *  A链表：0-1-2-3-4-5
- *  B链表：a-b-4-5
- *  AB拼接：0-1-2-3-4-5-a-b-4-5
- *  BA拼接：a-b-4-5-0-1-2-3-4-5
- *
- *  AB和BA从4开始相同，4就是要找的节点
- * 
- *  原理：
- *  A链表：al+ar
- *  B链表：bl+br
- *  AB链表：al+ar+bl+br
- *  BA链表：bl+br+al+ar
- *  上面ar和br是一样的，所以AB链表和BA链表等长且最后一小段一定重复
- *  
- *
- *
- *  解法四：差和双指针
- *  两个链表有长度差l，让长的链表先走l，然后再一起走，走到相同的那个节点就是
- *  第一个共同节点
- *
  */
 
 public class findFirstCommonNode {
-    // 使用哈希和集合处理
+    // 解法一：使用哈希和集合处理
     public ListNode findFirstCommonNodeBySet(ListNode headA, ListNode headB) {
         Set<ListNode> set = new HashSet<ListNode>();
         while (headA != null) {
@@ -53,7 +27,7 @@ public class findFirstCommonNode {
         return null;
     }
 
-    // 使用栈解决
+    // 解法二：使用栈解决
     public ListNode findFirstCommonNodeByStack(ListNode headA, ListNode headB) {
         Stack<ListNode> stackA = new Stack<>();
         Stack<ListNode> stackB = new Stack<>();
@@ -78,7 +52,24 @@ public class findFirstCommonNode {
         return preNode;
     }
 
-    // 拼接字符串
+    // 解法三：拼接字符串
+    /**
+     *  解释：
+     *  A链表：0-1-2-3-4-5
+     *  B链表：a-b-4-5
+     *  AB拼接：0-1-2-3-4-5-a-b-4-5
+     *  BA拼接：a-b-4-5-0-1-2-3-4-5
+     *
+     *  AB和BA从4开始相同，4就是要找的节点
+     *
+     *  原理：
+     *  A链表：al+ar
+     *  B链表：bl+br
+     *  AB链表：al+ar+bl+br
+     *  BA链表：bl+br+al+ar
+     *  上面ar和br是一样的，所以AB链表和BA链表等长且最后一小段一定重复
+    *
+    * */
     public ListNode findFirstCommonNode(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) return null;
         ListNode p1 = headA;
@@ -101,6 +92,11 @@ public class findFirstCommonNode {
     }
 
     // 解法四：差和双指针
+    /**
+     *
+     *  两个链表有长度差l，让长的链表先走l，然后再一起走，走到相同的那个节点就是
+     *  第一个共同节点
+     */
     public ListNode findFirstCommonNode2(ListNode headA, ListNode headB) {
         if(headA == null || headB == null) return null;
         ListNode current1 = headA;
