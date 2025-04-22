@@ -139,6 +139,11 @@ public class findFirstCommonNode {
 
         // 同时遍历2个链表
         while (current2 != current1) {
+            // 这一行没有必要，为什么
+            // 因为如果两个链表有共同节点，一定不是null
+            // 如果两个链表没有共同节点，差和双指针方法保证了两个指针会同时步进到终点即current2=current1=null
+            // 所以不需要下面这一行了
+            //  if(currentA == null || currentB == null) return null;
             current2 = current2.next;
             current1 = current1.next;
         }
