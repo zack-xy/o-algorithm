@@ -1,4 +1,4 @@
-package algorithm.链表常见题.判断链表是否存在回文序列;
+package algorithm.链表常见题.判断链表是否回文;
 
 import java.util.ArrayList;
 import java.util.List;
