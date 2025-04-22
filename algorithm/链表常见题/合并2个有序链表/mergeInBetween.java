@@ -41,4 +41,24 @@ public class mergeInBetween {
         post2.next = post1;
         return list1;
     }
+
+    // 跟上面一样，优化了一个变量
+    public ListNode mergeInBetween2(ListNode list1, int a, int b, ListNode list2) {
+        ListNode pre1 = list1, post1 = list1, post2 = list2;
+        int i = 0;
+        while (i < b) {
+            if(i < a - 1) {
+                pre1 = pre1.next;
+            }
+            post1 = post1.next;
+            i++;
+        }
+        post1 = post1.next;
+        while (post2.next != null) {
+            post2 = post2.next;
+        }
+        pre1.next = list2;
+        post2.next = post1;
+        return list1;
+    }
 }
