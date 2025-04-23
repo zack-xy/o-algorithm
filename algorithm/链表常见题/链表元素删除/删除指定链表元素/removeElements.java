@@ -6,15 +6,13 @@ import dataStructure.链表.ListNode;
  * 
  * [203. 移除链表元素](https://leetcode.cn/problems/remove-linked-list-elements/submissions/623091945/)
  * 
- * 解法一：我自己写的，利用2个指针，前pre，当前cur，当前的值等于目标值，移动pre的next指针，否则移动pre指针
- * 
- * 解法二：优化1，实际只需要1个指针就好了
- * 
  */
 
 public class removeElements {
   
 
+  // 解法一：判断当前节点是不是要移除的节点，所以需要两个指针
+  // 操作移除当前节点，需要修改前一个节点的next指向
   public ListNode removeElements(ListNode head, int val) {
     ListNode dummyHead = new ListNode(0);
     dummyHead.next = head;
@@ -31,6 +29,8 @@ public class removeElements {
     return dummyHead.next;
   }
 
+  // 解法二：利用虚拟头节点，判断操作当前节点的下一个节点
+  // 删除的是下一个节点，所以只需要一个指针，指向当前节点就好了
   public ListNode removeElements2(ListNode head, int val) {
     ListNode dummyHead = new ListNode(0);
     dummyHead.next = head;

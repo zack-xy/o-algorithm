@@ -6,20 +6,11 @@ import dataStructure.链表.ListNode;
  * 
  * [19. 删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/)
  * 
- * 解法一：先遍历链表，计算链表长度length
- * 删除length - n + 1位置的节点
- * ⚠️：这里使用了虚拟头节点，为什么需要用？
- * 因为有可能出先删除头节点的情况，如果不用虚拟头节点，需要单独处理这个情况
- *
- *
- *
- *
- *
  */
 
 public class removeNthFromEnd {
 
-    // 解法一：
+    // 解法一：先遍历链表，计算链表长度length，删除length - n + 1位置的节点
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
@@ -51,7 +42,7 @@ public class removeNthFromEnd {
         return ans;
     }
 
-    public int getLength(ListNode head) {
+    private int getLength(ListNode head) {
         int length = 0;
         while (head != null) {
             ++length;
