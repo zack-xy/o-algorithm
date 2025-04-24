@@ -1,0 +1,28 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug TS with TSX",
+      "runtimeExecutable": "tsx",
+      "args": "${workspaceFolder}/dist/removeElements.ts",
+      "sourceMaps": true,
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
+      ],
+      "outFiles": [],  // 必须留空，避免干扰 tsx 的 Source Map
+      "skipFiles": ["<node_internals>/**"],
+      "env": {
+        "TSX_ENABLE_SOURCE_MAPS": "1" // 确保 Source Map 启用
+      },
+      "sourceMapPathOverrides": {
+        "file:///*": "${workspaceFolder}/*"
+      }
+    }
+  ]
+}

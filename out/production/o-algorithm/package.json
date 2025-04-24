@@ -1,0 +1,25 @@
+{
+  "name": "o-algorithm",
+  "version": "1.0.0",
+  "description": "算法与数据结构",
+  "author": "zack zheng",
+  "license": "ISC",
+  "homepage": "https://github.com/zack-xy/o-algorithm#readme",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zack-xy/o-algorithm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zack-xy/o-algorithm/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "tsx": "^4.19.3",
+    "typescript": "^4.9.3"
+  }
+}
