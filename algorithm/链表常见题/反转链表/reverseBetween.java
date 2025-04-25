@@ -10,6 +10,10 @@ public class reverseBetween {
      */
 
     // 头插法
+    // 一共有3个指针
+    // pre：永远指向待反转区域的第一个节点left的前一个节点，在循环中不变
+    // cur：指向待反转区域的第一个节点left
+    // next：指向curr的下一个节点，循环过程中，curr变化以后next会变化
     public ListNode reverseBetween(ListNode head, int left, int right) {
         ListNode dummyNode = new ListNode(-1);
         dummyNode.next = head;
