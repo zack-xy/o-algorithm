@@ -57,7 +57,6 @@ public class removeNodes {
 
     // 官方题解二：栈
     // 跟递归是一样的，使用栈模拟递归
-    // 这里又是怎么删除头节点的呢？传入跟传出的不是一个参数么？为什么不一样呢？
     public static ListNode removeNodes2(ListNode head) {
         Deque<ListNode> stack = new ArrayDeque<>();
         for (; head != null; head = head.next) {
