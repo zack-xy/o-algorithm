@@ -9,6 +9,7 @@ public class reverseBetween {
      *
      */
 
+    // 头插法
     public ListNode reverseBetween(ListNode head, int left, int right) {
         ListNode dummyNode = new ListNode(-1);
         dummyNode.next = head;
@@ -57,6 +58,7 @@ public class reverseBetween {
         leftNode.next = succ;
         return dummyNode.next;
     }
+
 
     private void reverseLinkedList(ListNode head) {
         ListNode pre = null;
