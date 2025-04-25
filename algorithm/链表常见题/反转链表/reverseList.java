@@ -34,4 +34,24 @@ public class reverseList {
         }
         return ans.next;
     }
+
+    // 解法三：通过递归
+    public static ListNode reverseList3(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode newHead = reverseList3(head.next);
+        head.next.next = head;
+        head.next = null;
+        return newHead;
+    }
+
+    // 测试代码
+    public static void main(String[] args) {
+        ListNode head = new ListNode(5, new ListNode(2, new ListNode(13, new ListNode(3, new ListNode(8)))));
+
+        ListNode ans = reverseList3(head);
+        System.out.println(ans.val);
+        System.out.println(head.val);
+
+    }
+
 }
