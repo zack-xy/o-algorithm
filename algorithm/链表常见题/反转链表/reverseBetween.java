@@ -1,0 +1,71 @@
+package algorithm.链表常见题.反转链表;
+
+import dataStructure.链表.ListNode;
+
+public class reverseBetween {
+    /**
+     *
+     * [92. 反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii/description/)
+     *
+     */
+
+    public ListNode reverseBetween(ListNode head, int left, int right) {
+        ListNode dummyNode = new ListNode(-1);
+        dummyNode.next = head;
+        ListNode pre = dummyNode;
+        for (int i = 0;i < left - 1;i++) {
+            pre = pre.next;
+        }
+        ListNode cur = pre.next;
+        ListNode next;
+        for (int i = 0;i < right - left; i++) {
+            next = cur.next;
+            cur.next = next.next;
+            next.next = pre.next;
+            pre.next = next;
+        }
+        return dummyNode.next;
+    }
+
+    // 穿针引线法
+    public ListNode reverseBetween2(ListNode head, int left, int right) {
+        // 因为头节点有可能发生变化，使用虚拟节点可以避免复杂的分类讨论
+        ListNode dummyNode = new ListNode(-1);
+        dummyNode.next = head;
+        ListNode pre = dummyNode;
+        // 第 1 步：从虚拟头节点走 left - 1 步，来到 left 节点的前一个节点
+        // 建议写在for循环里，语义清晰
+        for (int i = 0;i < left - 1; i++) {
+            pre = pre.next;
+        }
+        // 第 2 步：从 pre 再走 right - left + 1步，来到 right 节点
+        ListNode rightNode = pre;
+        for (int i = 0; i < right - left + 1; i++) {
+            rightNode = rightNode.next;
+        }
+        // 第 3 步：切出一个子链表
+        ListNode leftNode = pre.next;
+        ListNode succ = rightNode.next;
+        // 思考一下，如果这里不设置next为null会怎么样
+        rightNode.next = null;
+
+        // 第 4 步：同第 206 题，反转链表的子区间
+        reverseLinkedList(leftNode);
+        // 第 5 步：接回原来的链表中
+        // 想一下，这里为什么可以用rightNode
+        pre.next = rightNode;
+        leftNode.next = succ;
+        return dummyNode.next;
+    }
+
+    private void reverseLinkedList(ListNode head) {
+        ListNode pre = null;
+        ListNode cur = head;
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+    }
+}
