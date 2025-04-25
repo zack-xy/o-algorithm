@@ -27,7 +27,7 @@ public class reverseBetween {
         return dummyNode.next;
     }
 
-    // 穿针引线法
+    // 穿针引线法: 也就是反转left -> right的链表之后再接起来
     public ListNode reverseBetween2(ListNode head, int left, int right) {
         // 因为头节点有可能发生变化，使用虚拟节点可以避免复杂的分类讨论
         ListNode dummyNode = new ListNode(-1);
