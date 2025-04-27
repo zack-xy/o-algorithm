@@ -34,6 +34,17 @@ public class ListNode {
         return length;
     }
 
+    // 打印链表节点
+    public void print() {
+        ListNode head = this;
+        while (head != null) {
+            System.out.print(head.val + "->");
+            head = head.next;
+        }
+        System.out.print("null");
+        System.out.print("\n");
+    }
+
     /**
      * 链表插入
      * @param head 链表头节点
