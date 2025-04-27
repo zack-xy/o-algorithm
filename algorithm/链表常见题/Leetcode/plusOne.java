@@ -28,7 +28,7 @@ public class plusOne {
         }
         int carry = 0; // 表示进位
         ListNode dummy = new ListNode(0);
-        int adder = 1;
+        int adder = 1;  // 表示要加1
         while (!st.empty() || carry > 0) {
             int digit = st.empty() ? 0 : st.pop();
             int sum = digit + adder + carry;
@@ -37,10 +37,12 @@ public class plusOne {
             ListNode cur = new ListNode(sum);
             cur.next = dummy.next;
             dummy.next = cur;
-            adder = 0;
+            adder = 0;   // 这里置为0，防止每一位都加1
         }
         return dummy.next;
     }
+
+    // 解法二：反转链表
 
     // 测试代码
     public static void main(String[] args) {
