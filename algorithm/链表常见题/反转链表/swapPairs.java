@@ -28,6 +28,10 @@ public class swapPairs {
 
 
     // 解法二：递归
+    // 递归终止条件：如果链表为空或者只有一个节点，无需交换，直接返回原链表
+    // 新的头节点是当前头节点的下一个节点
+    // 递归调用 swapPairs2 函数，处理从 newHead.next 开始的剩余链表
+    // 让新的头节点 newHead 的 next 指针指向当前的 head 节点，完成当前相邻节点的交换
     public ListNode swapPairs2(ListNode head) {
         if (head == null || head.next == null) return head;
         ListNode newHead = head.next;
