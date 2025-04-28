@@ -36,6 +36,17 @@ public class reverseKGroup {
     }
 
     // 解法二：穿针引线法
+
+    /**
+     *
+     * 需要4个指针
+     *
+     * pre：反转区间的前1个节点。用来连接反转后的节点
+     * start：反转区间开始节点
+     * end：反转区间结束节点
+     * next：反转区间后面剩余节点的嗲一个，反转后的区间子链表需要重新连接剩下的部分
+     *
+     */
     public ListNode reverseKGroup2(ListNode head, int k) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
@@ -48,7 +59,7 @@ public class reverseKGroup {
             for (int i = 0; i < k && end != null; i++) {
                 end  = end.next;
             }
-            if (end == null) {
+            if (end == null) {   // 这里如果区间不足k的话，就不执行了
                 break;
             }
             // 将要处理的区间裁剪下来
