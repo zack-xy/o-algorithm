@@ -43,11 +43,50 @@ public class plusOne {
     }
 
     // 解法二：反转链表
+    public static ListNode plusOne2(ListNode head) {
+        // 反转链表
+        head = reverse(head);
+
+        ListNode current = head;
+        int carry = 1;
+
+        while (current != null) {
+            int sum = current.val + carry;
+            current.val = sum % 10;
+            carry = sum / 10;
+            if (carry == 0) {
+                break;
+            }
+            if (current.next == null && carry != 0) {
+                current.next = new ListNode(carry);
+                break;
+            }
+            current = current.next;
+        }
+
+        // 反转链表得到最终结果
+        head = reverse(head);
+
+        return head;
+    }
+
+    private static ListNode reverse(ListNode head) {
+        ListNode prev = null;
+        ListNode cur = head;
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = next;
+        }
+        return prev;
+    }
 
     // 测试代码
     public static void main(String[] args) {
         ListNode head = new ListNode(1, new ListNode(2, new ListNode(3)));
-        ListNode plusOne = plusOne(head);
+        ListNode plusOne = plusOne2(head);
         plusOne.print();
+        System.out.println(5/10);
     }
 }
