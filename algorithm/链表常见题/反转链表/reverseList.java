@@ -23,6 +23,9 @@ public class reverseList {
     }
 
     // 解法二：带虚拟头节点的反转
+    // 带虚拟头节点的算法是：
+    // 不断的将节点插入到虚拟头节点的后面
+    // ⚠️这里有操作的顺序：否则会形成环形链表
     public ListNode reverseList2(ListNode head) {
         ListNode ans = new ListNode(-1);
         ListNode cur = head;
@@ -36,6 +39,8 @@ public class reverseList {
     }
 
     // 解法三：通过递归
+    // 这个递归函数在内部持有了一个变量newHead
+    // 执行栈从后到前执行链表的每一个节点，将当前节点插入到newHead尾部，返回newHead
     public static ListNode reverseList3(ListNode head) {
         if (head == null || head.next == null) return head;
         ListNode newHead = reverseList3(head.next);
@@ -44,13 +49,15 @@ public class reverseList {
         return newHead;
     }
 
+
+
     // 测试代码
     public static void main(String[] args) {
-        ListNode head = new ListNode(5, new ListNode(2, new ListNode(13, new ListNode(3, new ListNode(8)))));
+        ListNode head = new ListNode(1, new ListNode(2));
 
-        ListNode ans = reverseList3(head);
-        System.out.println(ans.val);
-        System.out.println(head.val);
+        ListNode newHead = reverseList3(head);
+
+        newHead.print();
 
     }
 
