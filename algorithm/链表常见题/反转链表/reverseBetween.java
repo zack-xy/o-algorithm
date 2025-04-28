@@ -12,8 +12,24 @@ public class reverseBetween {
     // 头插法
     // 一共有3个指针
     // pre：永远指向待反转区域的第一个节点left的前一个节点，在循环中不变
-    // cur：指向待反转区域的第一个节点left
+    // cur：指向待反转区域的第一个节点left（初始化的时候）
     // next：指向curr的下一个节点，循环过程中，curr变化以后next会变化
+
+    /**
+     *
+     * 这个循环怎么悠起来，或者这个算法怎么理解
+     *
+     * pre指针永远指向待反转区间的前一个节点，因为就是不停的把后一个节点插到“头部”（pre的后面）来
+     * cur循环开始的时候指向待反转的第一个节点，next指向cur的下一个节点
+     * 循环开始：
+     * 把next插到pre的下一个位置
+     * 把cur插到next的位置
+     * 也就是交换了cur和next的位置
+     *
+     * 这一次循环之后，cur正好在后一个位置，cur的next正好是下一个要处理的next
+     *
+     *
+     */
     public ListNode reverseBetween(ListNode head, int left, int right) {
         ListNode dummyNode = new ListNode(-1);
         dummyNode.next = head;
@@ -26,6 +42,9 @@ public class reverseBetween {
         for (int i = 0;i < right - left; i++) {
             next = cur.next;
             cur.next = next.next;
+            // pre.next不就是cur么，为什么不直接写成cur
+            // 这是因为咱们是“头插”也就是插到pre的下一个位置，在交换cur和next的过程中，cur的位置变了
+            // 就不是“头插”了
             next.next = pre.next;
             pre.next = next;
         }
