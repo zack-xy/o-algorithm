@@ -2,6 +2,8 @@ package algorithm.链表常见题.反转链表;
 
 import dataStructure.链表.ListNode;
 
+import java.util.Stack;
+
 public class reverseList {
     /**
      *
@@ -49,13 +51,32 @@ public class reverseList {
         return newHead;
     }
 
+    // 通过栈来模拟这个递归
+    public static ListNode reverseList4(ListNode head) {
+        if (head == null || head.next == null) return head;
+        Stack<ListNode> stk = new Stack<>();
+        ListNode cur = head;
+        while (cur != null) {
+            stk.push(cur);
+            cur = cur.next;
+        }
+        ListNode ans = new ListNode(-1);
+        cur = ans;
+        while (!stk.isEmpty()) {
+           ListNode node = stk.pop();
+           cur.next = node;
+           node.next = null;
+           cur = cur.next;
+        }
+        return ans.next;
+    }
 
 
     // 测试代码
     public static void main(String[] args) {
-        ListNode head = new ListNode(1, new ListNode(2));
+        ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
 
-        ListNode newHead = reverseList3(head);
+        ListNode newHead = reverseList4(head);
 
         newHead.print();
 
