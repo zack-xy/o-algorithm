@@ -18,4 +18,21 @@ public class removeElement {
         }
         return slow;
     }
+
+    // 解法二：对撞双指针
+    public int removeElement2(int[] nums, int val) {
+        int right = nums.length - 1;
+        int left = 0;
+
+        for (left = 0; left <= right;) {
+           if ((nums[left] == val) && (nums[right] != val)) {
+               int tmp = nums[left];
+               nums[left] = nums[right];
+               nums[right] = tmp;
+           }
+           if (nums[left] != val) left++;
+           if (nums[right] ==val) right--;
+        }
+        return left;
+    }
 }
