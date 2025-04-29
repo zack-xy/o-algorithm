@@ -1,4 +1,4 @@
-package algorithm.数组常见题;
+package algorithm.数组常见题.Leetcode;
 
 public class isMonotonic {
 
