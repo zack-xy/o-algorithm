@@ -35,4 +35,18 @@ public class removeElement {
         }
         return left;
     }
+
+    // 对撞的换一种写法
+    public int removeElement3(int[] nums, int val) {
+        int right = nums.length - 1;
+        for (int left=0;left<=right;) {
+            if (nums[left] == val) {
+                nums[left]=nums[right];
+                right--;
+            } else {
+                left++;
+            }
+        }
+        return right+1;
+    }
 }

@@ -21,4 +21,16 @@ public class removeDuplicates {
         }
         return slow;
     }
+
+    // 换一种写法
+    public int removeDuplicates2(int[] nums) {
+        int slow = 1;
+        for (int fast=0;fast<nums.length;fast++) {
+            if(nums[fast]!=nums[slow-1]) {
+                nums[slow]=nums[fast];
+                slow++;
+            }
+        }
+        return slow;
+    }
 }
