@@ -24,3 +24,5 @@ function extend(nums: number[], enlarge: number): number[] {
   }
   return res;
 }
+
+export { insert, remove, extend }
