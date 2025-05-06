@@ -78,6 +78,20 @@ public class findSpecialInteger {
         return res;
     }
 
+    // 既然arr[0]、arr[span]、arr[span*2],...一定包含x
+    // 为什么不能找这里面相同的一个？只要2个相同，就是要找的那个了
+    // 因为前面的要求是2个相同，如果只有1个呢，如果有2个但是不相同呢？特殊情况不好处理
+    public int findSpecialInteger5(int[] arr) {
+        int n = arr.length;
+        int span = n / 4 + 1;
+        int pre = arr[0];
+        for (int i=span;i<n;i+=span) {
+            if (arr[i] == pre) return arr[i];
+            else pre = arr[i];
+        }
+        return -1;
+    }
+
     // 使用map计数
     public int findSpecialInteger3(int[] arr) {
         if (arr == null) return 0;
