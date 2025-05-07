@@ -23,11 +23,11 @@ public class search {
     // 二分查找写法二：区间是[left, right)
     public static int search2(int[] nums, int target) {
         int left=0;
-        int right=nums.length; // 不包含right，所以是nums.length
-        while(left < right) {
+        int right=nums.length; // 不同点1: 不包含right，所以是nums.length
+        while(left<right) {  // 不同点2
             int mid=left+((right-left)>>1);
             if(nums[mid]==target) return mid;
-            if(nums[mid]>target) right=mid;
+            if(nums[mid]>target) right=mid; // 不同点3
             if(nums[mid]<target) left=mid+1;
         }
         return -1;
