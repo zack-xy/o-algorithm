@@ -63,6 +63,7 @@ public class singleNumber2 {
     }
 
     // 解法四：数字电路设计优化
+    // 也叫状态机
     // TODO 没看，可能不好理解，后续再来看
     public int singleNumber4(int[] nums) {
         int a=0,b=0;
