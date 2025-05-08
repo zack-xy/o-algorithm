@@ -1,4 +1,4 @@
-package algorithm.数组常见题.Leetcode;
+package algorithm.数组常见题.元素次数;
 
 import java.util.HashMap;
 import java.util.Map;
