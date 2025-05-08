@@ -60,3 +60,5 @@ class ArrayQueue {
     return arr;
   }
 }
+
+export default ArrayQueue;

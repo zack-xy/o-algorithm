@@ -37,3 +37,5 @@ class ArrayStack {
     return this.stack;
   }
 }
+
+export default ArrayStack;

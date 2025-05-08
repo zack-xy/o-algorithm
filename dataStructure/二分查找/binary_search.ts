@@ -35,3 +35,5 @@ function binarySearchLCRO(nums: number[], target: number): number {
   }
   return -1;
 }
+
+export { binarySearch, binarySearchLCRO }
