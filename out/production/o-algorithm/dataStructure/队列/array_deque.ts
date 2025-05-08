@@ -90,3 +90,5 @@ class ArrayDeque {
     return res;
   }
 }
+
+export default ArrayDeque;

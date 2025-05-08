@@ -1,4 +1,4 @@
-import { ListNode } from '../链表/ListNode';
+import ListNode from '../链表/ListNode';
 
 // 基于链表实现的栈
 class LinkedListStack {

@@ -77,3 +77,5 @@ class MyList {
     return arr;
   }
 }
+
+export default MyList

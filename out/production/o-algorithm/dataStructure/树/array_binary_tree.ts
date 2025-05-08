@@ -75,3 +75,5 @@ class ArrayBinaryTree {
     return res;
   }
 }
+
+export default ArrayBinaryTree;
