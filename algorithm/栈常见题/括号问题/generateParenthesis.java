@@ -1,4 +1,4 @@
-package algorithm.栈常见题.括号匹配;
+package algorithm.栈常见题.括号问题;
 
 import java.util.ArrayList;
 import java.util.List;
