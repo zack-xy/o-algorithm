@@ -56,21 +56,21 @@ class ArrayBinaryTree {
 
   // 前序遍历
   preOrder(): (number | null)[] {
-    const res = [];
+    const res: (number | null)[] = [];
     this.#dfs(0, 'pre', res);
     return res;
   }
 
   // 中序遍历
   inOrder(): (number | null)[] {
-    const res = [];
+    const res: (number | null)[] = [];
     this.#dfs(0, 'in', res);
     return res;
   } 
 
   // 后序遍历
   postOrder(): (number | null)[] {
-    const res = [];
+    const res: (number | null)[] = [];
     this.#dfs(0, 'post', res);
     return res;
   }
