@@ -10,9 +10,9 @@ import java.util.Map;
  */
 public class fourSumCount {
 
-    // 分组 +
-    // TODO 待理解
+    // 分组 + 哈希表
     public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {
+        // 这个Map的key是两个数字和，value是这个和有几组
         Map<Integer, Integer> countAB = new HashMap<Integer, Integer>();
         for (int u : nums1) {
             for (int v : nums2) {
