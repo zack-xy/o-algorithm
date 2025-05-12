@@ -1,4 +1,4 @@
-package algorithm.栈常见题.Leetcode;
+package algorithm.队列常见题.栈与队列实现;
 
 import java.util.LinkedList;
 import java.util.Queue;
