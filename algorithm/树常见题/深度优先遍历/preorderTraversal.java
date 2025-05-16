@@ -60,7 +60,7 @@ public class preorderTraversal {
         if (root == null) return res;
 
         Deque<TreeNode> stack = new LinkedList<>();
-        TreeNode node = root;
+        TreeNode node = root;  // 这里为什么要多个变量？
         while (!stack.isEmpty() || node != null) {
             while (node != null) { // 不停的将左子树压栈，并且根值塞到结果数组里
                 res.add(node.val);

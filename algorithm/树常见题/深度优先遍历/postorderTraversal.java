@@ -29,7 +29,19 @@ public class postorderTraversal {
     }
 
     // 解法二：迭代法
-    public List<Integer> postorderTraversal2(TreeNode root) {
+    // 后序遍历顺序是[左，右，根]
+
+
+    // 这个迭代的步骤是：
+    //   大循环：判断栈和节点是否为空，只要有一个不空，就继续处理
+    //           小循环：当前节点不为空
+    //                 1. 栈中塞入当前节点（因为顺序是左右根，所以要一直找到最左的节点，要把当前节点存起来）
+    //                 2. 当前节点 = 当前节点.left
+    //           小循环结束后，栈顶元素就是最左一个元素
+    //           if else 什么意思？
+    //           （当前弹出的节点是最左节点，节点right是null的，把左节点塞到结果里）
+    //            // TODO 这里有点儿难理解了
+    public static List<Integer> postorderTraversal2(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         if (root == null) return res;
 
@@ -51,5 +63,11 @@ public class postorderTraversal {
             }
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        TreeNode tree = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3, new TreeNode(6), new TreeNode(7)));
+        List<Integer> res = postorderTraversal2(tree);
+        System.out.println(res.toString());
     }
 }
