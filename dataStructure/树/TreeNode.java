@@ -21,6 +21,14 @@ public class TreeNode {
     // 经常Leetcode提供一个列表表示一棵树
     // 提供的列表其实是层序遍历的结果
     // 当前节点索引i，左子树索引2i+1，右子树索引2i+2
+
+    /**
+     * @param arr
+     *
+     * ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2,3,3,4,5,5,4,null,null,8,9,9,8));
+     * TreeNode root = new TreeNode(list);
+     *
+     */
     public TreeNode(ArrayList<Integer> arr) {
         // 空树或无效输入
         if (arr == null || arr.isEmpty() || arr.get(0) == null) return;
