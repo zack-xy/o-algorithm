@@ -100,9 +100,6 @@ public class lowestCommonAncestor {
     }
 
 
-
-
-
     public static void main(String[] args) {
         TreeNode root = new TreeNode(new ArrayList<>(Arrays.asList(1,2)));
         TreeNode commonFather = lowestCommonAncestor(root, root, root.left);
