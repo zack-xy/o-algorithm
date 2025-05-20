@@ -24,7 +24,7 @@ public class findMin {
         while (low < high) {
             int mid = low + ((high - low) >> 1);
             if (nums[mid] < nums[high]) {
-                high = mid;
+                high = mid;  // 这里为什么不是mid-1呢？如果此时mid已经是最小
             } else {
                 low = mid + 1;
             }
