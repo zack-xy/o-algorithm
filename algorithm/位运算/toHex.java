@@ -7,6 +7,7 @@ package algorithm.位运算;
  */
 public class toHex {
 
+    // TODO 不太懂位运算
     public String toHex(int num) {
         if (num == 0) {
             return "0";
