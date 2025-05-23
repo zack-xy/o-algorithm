@@ -1,9 +1,6 @@
 package algorithm.排序算法;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class AllSort {
 
@@ -146,7 +143,7 @@ public class AllSort {
         return i;
     }
 
-    // 【快速排序 - 尾递归优化】
+    // 【快速排序 - 尾递归优化】Java不支持尾递归优化
     public static void quickSort2(int[] nums, int left, int right) {
         // 子数组长度为1时终止
         while (left < right) {
@@ -159,6 +156,37 @@ public class AllSort {
             } else {
                 quickSort2(nums, pivot + 1, right);  // 递归排序右子树数组
                 right = pivot - 1; // 剩余未排序空间为[left, pivot-1]
+            }
+        }
+    }
+
+    // 因为Java不支持尾递归优化，所以依然可能导致栈溢出
+    // 显式栈（迭代法）
+    public void quickSortStack(int[] nums, int left, int right) {
+        Deque<Integer> stack = new ArrayDeque<>();
+        stack.push(left);
+        stack.push(right);
+
+        while (!stack.isEmpty()) {
+            right = stack.pop();
+            left = stack.pop();
+
+            if (left >= right) continue;
+
+            int pivot = partition2(nums, left, right);
+            // 先处理较短子数组，减少栈深度
+            if (pivot - left < right - pivot) {
+                stack.push(left);
+                stack.push(pivot - 1);
+
+                stack.push(pivot + 1);
+                stack.push(right);
+            } else {
+                stack.push(pivot + 1);
+                stack.push(right);
+
+                stack.push(left);
+                stack.push(pivot - 1);
             }
         }
     }
