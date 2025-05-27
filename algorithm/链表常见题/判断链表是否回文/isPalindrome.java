@@ -7,7 +7,7 @@ import dataStructure.链表.ListNode;
 
 /**
  * 
- * https://leetcode.cn/problems/palindrome-linked-list/description/
+ * [234. 回文链表](https://leetcode.cn/problems/palindrome-linked-list/description/)
  * 
  */
 
