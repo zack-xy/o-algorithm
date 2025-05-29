@@ -4,6 +4,7 @@ import com.sun.source.tree.Tree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 // 二叉树节点类
@@ -60,5 +61,19 @@ public class TreeNode {
         this.val = val;
         this.left = left;
         this.right = right;
+    }
+
+    // 将列表反序列化为二叉树
+    public static TreeNode listToTree(List<Integer> arr) {
+        return listToTreeDFS(arr, 0);
+    }
+
+    // 将列表反序列化为二叉树：递归
+    private static TreeNode listToTreeDFS(List<Integer> arr, int i) {
+        if (i < 0 || i >= arr.size() || arr.get(i) == null) return null;
+        TreeNode root = new TreeNode(arr.get(i));
+        root.left = listToTreeDFS(arr, 2 * i + 1);
+        root.right = listToTreeDFS(arr, 2 * i + 2);
+        return root;
     }
 }
