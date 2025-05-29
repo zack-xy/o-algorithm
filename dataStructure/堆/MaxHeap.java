@@ -17,7 +17,8 @@ public class MaxHeap {
         // 将列表元素原封不动添加进堆
         maxHeap = new ArrayList<>(nums);
         // 堆化除叶节点之外的其他所有节点，【为什么要这样堆化呢？】
-        //
+        // 这种方法保证了子树合法再处理父节点，整体时间复杂度是O(n)
+        // 如果采用依次入堆siftUp的方式，时间复杂度是O(nlogn)
         for (int i = parent(size() - 1); i>=0; i--) {
             siftDown(i);
         }
