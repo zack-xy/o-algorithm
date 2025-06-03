@@ -43,8 +43,8 @@ public class binarysearch2 {
             if (nums[mid] >= target) right = mid - 1;  // 先处理>=，意味着right停止在【小于】target处
             else left = mid + 1;   // 因为前置的处理，left与right相遇处，是最后一个【小于】target处，下一次处理，循环退出，停在【第一个大于等于target的位置】
         }
-        if (nums[left] == target) return left;
-        return -1;
+        int result = right + 1;   // 防止索引越界
+        return (result < nums.length && nums[result] == target) ? result : -1;
     }
 
     // 存在重复元素 - 获得最后一个等于target的索引
@@ -55,7 +55,7 @@ public class binarysearch2 {
             if (nums[mid] <= target) left = mid + 1; // 先处理<=，意味着left停止在【大于】target处
             else right = mid - 1;  // 因为前置的处理，left与right相遇处，是第一个【大于】target处，下一次处理，循环退出，停在【最后一个“大于”等于target的位置】
         }
-        if (nums[right] == target) return right;
+        if (right >= 0 && nums[right] == target) return right;
         return -1;
     }
 
