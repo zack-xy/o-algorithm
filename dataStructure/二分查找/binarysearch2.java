@@ -14,8 +14,7 @@ public class binarysearch2 {
         return -1;
     }
 
-    // 如果是有重复元素，如果查找的元素重复，则找左侧第1个
-    // 虽然我不知道找到的索引是在最左边还是中间还是最右边，但是我可以向左探测，走到最左边
+    // 如果是有重复元素，如果查找的元素重复，则找左侧第1个【线性探查】
     public static int search2(int[] nums, int target) {
         if (nums == null || nums.length == 0) return -1;
         int left = 0,right = nums.length - 1;
@@ -58,6 +57,18 @@ public class binarysearch2 {
         if (right >= 0 && nums[right] == target) return right;
         return -1;
     }
+
+
+    /**
+     *
+     * ⚠️注意⚠️ 有关于索引溢出的问题
+     *
+     *     // 针对函数 search
+     *     // 当退出循环的时候，其实left和right其中有一个索引已经溢出了
+     *     // 只不过因为返回的数据不使用left和right，而且一旦索引溢出，循环就退出了，所以没有影响
+     *
+     *
+     */
 
 
 
