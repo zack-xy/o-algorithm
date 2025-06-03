@@ -18,8 +18,7 @@ public class binarysearch2 {
     // 虽然我不知道找到的索引是在最左边还是中间还是最右边，但是我可以向左探测，走到最左边
     public static int search2(int[] nums, int target) {
         if (nums == null || nums.length == 0) return -1;
-        int left = 0;
-        int right = nums.length - 1;
+        int left = 0,right = nums.length - 1;
         while (left <= right) {
             int mid = left + ((right - left) >> 1);
             if (nums[mid] < target) {
