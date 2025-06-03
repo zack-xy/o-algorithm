@@ -67,6 +67,12 @@ public class binarysearch2 {
      *     // 当退出循环的时候，其实left和right其中有一个索引已经溢出了
      *     // 只不过因为返回的数据不使用left和right，而且一旦索引溢出，循环就退出了，所以没有影响
      *
+     *     // search3防止越界的处理也可以这么写
+     *     if (left < nums.length && nums[left] == target) return left;
+     *     return -1;
+     *
+     *     所以因为left和right是函数的返回，所以判断一处越界就好了。无论判断哪一个都是可以的
+     *
      *
      */
 
