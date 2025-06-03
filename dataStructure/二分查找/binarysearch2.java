@@ -35,32 +35,28 @@ public class binarysearch2 {
         return -1;
     }
 
+    // 存在重复元素 - 获得第一个等于target的索引
     public int search3(int[] nums, int target) {
         int left = 0, right = nums.length - 1;
-        while (left <=  right) {
+        while (left <= right) {
             int mid = left + ((right - left) >> 1);
-            if (nums[mid] >= target) right = mid - 1;
-            else left = mid + 1;
+            if (nums[mid] >= target) right = mid - 1;  // 先处理>=，意味着right停止在【小于】target处
+            else left = mid + 1;   // 因为前置的处理，left与right相遇处，是最后一个【小于】target处，下一次处理，循环退出，停在【第一个大于等于target的位置】
         }
-        // 【如果target存在】返回的是target重复区间的最左侧索引
-        //  【如果target不存在】返回第1个大于target的位置
-        // 为什么呢？
-        // 因为只要比target小，left就要往前进，最终会停在第一个大于等于target的位置
-        // 只要大于等于target，right就要往前进，最终会停在最后一个小于target的位置
-        return left;
-        // 如果 return right;
-        // 【如果target存在】返回的target重复区间左侧的前1个位置
-        // 【如果target不存在】最终会停在最后一个小于target的位置
+        if (nums[left] == target) return left;
+        return -1;
     }
 
+    // 存在重复元素 - 获得最后一个等于target的索引
     public int search4(int[] nums, int target) {
         int left = 0, right = nums.length - 1;
         while (left <= right) {
             int mid = left + ((right - left) >> 1);
-            if (nums[mid] <= target) left = mid + 1;
-            else right = mid - 1;
+            if (nums[mid] <= target) left = mid + 1; // 先处理<=，意味着left停止在【大于】target处
+            else right = mid - 1;  // 因为前置的处理，left与right相遇处，是第一个【大于】target处，下一次处理，循环退出，停在【最后一个“大于”等于target的位置】
         }
-        return right;
+        if (nums[right] == target) return right;
+        return -1;
     }
 
 
