@@ -14,10 +14,10 @@ import java.util.List;
  */
 public class preorder_traversal_iii_compact {
 
-    List<TreeNode> path = new ArrayList<>();
-    List<List<TreeNode>> res = new ArrayList<>();
+    static List<TreeNode> path = new ArrayList<>();
+    static List<List<TreeNode>> res = new ArrayList<>();
 
-    public void preOrder(TreeNode root) {
+    public static void preOrder(TreeNode root) {
         // 剪枝
         if (root == null || root.val == 3) return;
         // 尝试
@@ -36,32 +36,32 @@ public class preorder_traversal_iii_compact {
     /// ///////////////////////////////////////////
 
     // 判断当前状态是否为解
-    public boolean isSolution(List<TreeNode> state) {
+    public static boolean isSolution(List<TreeNode> state) {
         return !state.isEmpty() && state.get(state.size() - 1).val == 7;
     }
 
     // 记录解
-    public void recordSolution(List<TreeNode> state, List<List<TreeNode>> res) {
+    public static void recordSolution(List<TreeNode> state, List<List<TreeNode>> res) {
         res.add(new ArrayList<>(state));
     }
 
     // 判断在当前状态下，该选择是否合法
-    public boolean isValid(List<TreeNode> state, TreeNode choice) {
+    public static boolean isValid(List<TreeNode> state, TreeNode choice) {
         return choice != null && choice.val != 3;
     }
 
     // 更新状态
-    public void makeChoice(List<TreeNode> state, TreeNode choice) {
+    public static void makeChoice(List<TreeNode> state, TreeNode choice) {
         state.add(choice);
     }
 
     // 恢复状态
-    public void undoChoice(List<TreeNode> state, TreeNode choice) {
+    public static void undoChoice(List<TreeNode> state, TreeNode choice) {
         state.remove(state.size() - 1);
     }
 
     /* 拆分的写法 */
-    public void backtrack(List<TreeNode> state, List<TreeNode> choices, List<List<TreeNode>> res) {
+    public static void backtrack(List<TreeNode> state, List<TreeNode> choices, List<List<TreeNode>> res) {
         // 检查是否为解
         if (isSolution(state)) {
             // 记录解
@@ -78,6 +78,46 @@ public class preorder_traversal_iii_compact {
                 // 回退：撤销选择，恢复到之前的状态
                 undoChoice(state, choice);
             }
+        }
+    }
+
+    // 测试代码
+
+    /**
+     * 树的结构示意图
+     *
+     *         /——— 7
+     *     /——— 3
+     *    |    \——— 6
+     * ——— 1
+     *    |    /——— 5
+     *     \——— 7
+     *         \——— 4
+     */
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(new ArrayList<>(Arrays.asList(1,7,3,4,5,6,7)));
+        // 第一种写法的测试
+        preOrder(root);
+        printRes(res);
+
+        System.out.println("----分隔线----");
+
+        // 第二种写法的测试
+        List<List<TreeNode>> res2 = new ArrayList<>();
+        backtrack(new ArrayList<TreeNode>(Arrays.asList(root)), new ArrayList<>(Arrays.asList(root.left, root.right)), res2);
+        printRes(res2);
+    }
+
+    private static void printRes(List<List<TreeNode>> res) {
+        for (List<TreeNode> list: res) {
+            StringBuilder sb = new StringBuilder();
+            for (int i=0;i<list.size();i++) {
+                sb.append(list.get(i).val);
+                if (i != list.size() - 1) {
+                    sb.append("->");
+                }
+            }
+            System.out.println(sb.toString());
         }
     }
 
