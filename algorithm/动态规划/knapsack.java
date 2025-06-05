@@ -46,6 +46,7 @@ public class knapsack {
         int[][] dp = new int[n+1][cap+1]; // 第一个索引表示物品编号，第二个索引表示背包容量
         // 状态转移
         for (int i=1;i<=n;i++) {
+            // 这里依次循环，比如放入1个的时候，不同的容量下，记录最大的价值
             for (int c=1;c<=cap;c++) {
                 if (wgt[i-1]>c) {
                     // 若超过背包容量，则不选物品i
@@ -66,7 +67,7 @@ public class knapsack {
         int[] dp = new int[cap+1];
         // 状态转移
         for (int i=1;i<=n;i++) {
-            // 倒序遍历
+            // 倒序遍历 为什么倒序遍历？
             for (int c=cap;c<=1;c--) {
                 if (wgt[i-1]<=c) {
                     // 不选和选物品i这两种方案的较大值
