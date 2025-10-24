@@ -1,4 +1,4 @@
-package algorithm.链表常见题.链表元素删除.删除指定链表元素;
+package algorithm.链表常见题.链表元素删除;
 
 import dataStructure.链表.ListNode;
 
@@ -8,7 +8,7 @@ import dataStructure.链表.ListNode;
  * 
  */
 
-public class removeElements {
+public class Leetcode203 {
   
 
   // 解法一：判断当前节点是不是要移除的节点，所以需要两个指针

@@ -2,7 +2,7 @@ package algorithm.链表常见题.反转链表;
 
 import dataStructure.链表.ListNode;
 
-public class reverseKGroup {
+public class Leetcode25 {
     /**
      *
      * [25. K 个一组翻转链表](https://leetcode.cn/problems/reverse-nodes-in-k-group/description/)

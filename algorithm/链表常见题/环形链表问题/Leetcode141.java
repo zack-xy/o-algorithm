@@ -9,7 +9,7 @@ import java.util.Set;
  * [141. 环形链表](https://leetcode.cn/problems/linked-list-cycle/)
  */
 
-public class hasCycle {
+public class Leetcode141 {
     // 解法一：使用set
     public boolean hasCycle(ListNode head) {
         ListNode pos = head;

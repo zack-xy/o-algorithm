@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * 
  */
 
-public class kthToLast {
+public class Leetcode0202 {
     public int kthToLast(ListNode head, int k) {
         ArrayList<Integer> list = new ArrayList<>();
         while (head != null) {

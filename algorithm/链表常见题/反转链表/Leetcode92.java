@@ -2,7 +2,7 @@ package algorithm.链表常见题.反转链表;
 
 import dataStructure.链表.ListNode;
 
-public class reverseBetween {
+public class Leetcode92 {
     /**
      *
      * [92. 反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii/description/)

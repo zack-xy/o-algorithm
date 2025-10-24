@@ -2,7 +2,7 @@ package algorithm.链表常见题.Leetcode;
 
 import dataStructure.链表.ListNode;
 
-public class deleteNode {
+public class Leetcode237 {
     /**
      *
      * [237. 删除链表中的节点](https://leetcode.cn/problems/delete-node-in-a-linked-list/?envType=problem-list-v2&envId=linked-list)

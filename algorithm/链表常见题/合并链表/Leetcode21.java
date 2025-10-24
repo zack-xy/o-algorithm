@@ -16,7 +16,7 @@ import dataStructure.链表.ListNode;
  * 
  */
 
-public class mergeTwoLists {
+public class Leetcode21 {
 
     // 解法一：代码一
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {

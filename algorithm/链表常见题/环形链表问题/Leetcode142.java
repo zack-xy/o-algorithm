@@ -3,14 +3,13 @@ package algorithm.链表常见题.环形链表问题;
 import dataStructure.链表.ListNode;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
  * [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/description/)
  *
  */
-public class detectCycle {
+public class Leetcode142 {
 
     // 解法一：使用set
     public ListNode detectCycle(ListNode head) {

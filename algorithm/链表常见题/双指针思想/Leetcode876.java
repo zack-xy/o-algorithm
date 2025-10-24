@@ -14,7 +14,7 @@ import dataStructure.链表.ListNode;
  * 
  */
 
-public class middleNode {
+public class Leetcode876 {
     public ListNode middleNode(ListNode head) {
         ListNode slow = head, fast = head;
         while (fast != null && fast.next != null) {

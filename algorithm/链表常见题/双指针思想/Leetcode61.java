@@ -9,7 +9,7 @@ import dataStructure.链表.ListNode;
  * 
  */
 
-public class rotateRight {
+public class Leetcode61 {
     public ListNode rotateRight(ListNode head, int k) {
         if(head == null || k == 0) return head;
 

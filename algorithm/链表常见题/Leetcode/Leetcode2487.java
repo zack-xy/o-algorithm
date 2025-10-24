@@ -4,9 +4,8 @@ import dataStructure.链表.ListNode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.LinkedList;
 
-public class removeNodes {
+public class Leetcode2487 {
     /**
      *
      * [2487. 从链表中移除节点](https://leetcode.cn/problems/remove-nodes-from-linked-list/description/?envType=problem-list-v2&envId=linked-list)

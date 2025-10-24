@@ -1,4 +1,4 @@
-package algorithm.链表常见题.链表元素删除.删除倒数第K个元素;
+package algorithm.链表常见题.链表元素删除;
 
 import dataStructure.链表.ListNode;
 
@@ -8,7 +8,7 @@ import dataStructure.链表.ListNode;
  * 
  */
 
-public class removeNthFromEnd {
+public class Leetcode19 {
 
     // 解法一：先遍历链表，计算链表长度length，删除length - n + 1位置的节点
     public ListNode removeNthFromEnd(ListNode head, int n) {

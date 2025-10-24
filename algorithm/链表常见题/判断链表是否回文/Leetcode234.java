@@ -11,7 +11,7 @@ import dataStructure.链表.ListNode;
  * 
  */
 
-public class isPalindrome {
+public class Leetcode234 {
 
 
     // 解法一：使用栈

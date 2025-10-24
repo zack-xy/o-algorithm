@@ -13,7 +13,7 @@ import dataStructure.链表.ListNode;
  *
  */
 
-public class findFirstCommonNode {
+public class Leetcode160 {
     // 解法一：使用哈希和集合处理
     public ListNode findFirstCommonNodeBySet(ListNode headA, ListNode headB) {
         Set<ListNode> set = new HashSet<ListNode>();

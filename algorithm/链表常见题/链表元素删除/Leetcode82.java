@@ -1,4 +1,4 @@
-package algorithm.链表常见题.链表元素删除.删除链表中的重复元素2;
+package algorithm.链表常见题.链表元素删除;
 
 import dataStructure.链表.ListNode;
 
@@ -15,7 +15,7 @@ import dataStructure.链表.ListNode;
  *
  */
 
-public class deleteDuplicates {
+public class Leetcode82 {
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null) return head;
         ListNode dummy = new ListNode(0);

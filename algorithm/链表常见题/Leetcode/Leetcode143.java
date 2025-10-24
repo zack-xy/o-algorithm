@@ -2,14 +2,12 @@ package algorithm.链表常见题.Leetcode;
 
 import dataStructure.链表.ListNode;
 
-import java.util.List;
-
 /**
  * [143. 重排链表](https://leetcode.cn/problems/reorder-list/description/?envType=problem-list-v2&envId=linked-list)
  *
  *
  */
-public class reorderList {
+public class Leetcode143 {
 
     // 我的第一版算法，想法是利用2个指针，依次处理，超出时间限制了，问题出在哪里？
     public static void reorderList(ListNode head) {

@@ -4,7 +4,7 @@ import dataStructure.链表.ListNode;
 
 import java.util.Stack;
 
-public class reverseList {
+public class Leetcode206 {
     /**
      *
      * [206. 反转链表](https://leetcode.cn/problems/reverse-linked-list/description/)

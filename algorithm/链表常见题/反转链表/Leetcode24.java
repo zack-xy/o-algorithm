@@ -2,7 +2,7 @@ package algorithm.链表常见题.反转链表;
 
 import dataStructure.链表.ListNode;
 
-public class swapPairs {
+public class Leetcode24 {
 
     /**
      *

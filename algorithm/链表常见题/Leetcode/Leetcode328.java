@@ -2,9 +2,7 @@ package algorithm.链表常见题.Leetcode;
 
 import dataStructure.链表.ListNode;
 
-import java.util.List;
-
-public class oddEvenList {
+public class Leetcode328 {
     /**
      *
      * [328. 奇偶链表](https://leetcode.cn/problems/odd-even-linked-list/description/?envType=problem-list-v2&envId=linked-list)

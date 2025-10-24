@@ -2,7 +2,7 @@ package algorithm.链表常见题.Leetcode;
 
 import dataStructure.链表.ListNode;
 
-public class swapNodes {
+public class Leetcode1721 {
     /**
      * [1721. 交换链表中的节点](https://leetcode.cn/problems/swapping-nodes-in-a-linked-list/description/?envType=problem-list-v2&envId=linked-list)
      *
