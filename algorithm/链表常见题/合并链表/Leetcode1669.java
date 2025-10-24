@@ -1,4 +1,4 @@
-package algorithm.链表常见题.合并2个有序链表;
+package algorithm.链表常见题.合并链表;
 
 import dataStructure.链表.ListNode;
 
@@ -18,7 +18,7 @@ import dataStructure.链表.ListNode;
  * 
  */
 
-public class mergeInBetween {
+public class Leetcode1669 {
     public ListNode mergeInBetween(ListNode list1, int a, int b, ListNode list2) {
         ListNode pre1 = list1, post1 = list1, post2 = list2;
         int i = 0, j = 0;

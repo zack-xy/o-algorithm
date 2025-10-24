@@ -1,4 +1,4 @@
-import { TreeNode } from '../../dataStructure/树/TreeNode';
+import { TreeNode } from 'dataStructure/树/TreeNode';
 
 // 给定一棵二叉树，搜索并记录所有值为7的节点，返回节点列表
 

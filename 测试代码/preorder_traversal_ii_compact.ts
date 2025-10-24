@@ -1,4 +1,4 @@
-import { TreeNode } from '../../dataStructure/树/TreeNode';
+import { TreeNode } from 'dataStructure/树/TreeNode';
 
 // 判断当前状态是否为解
 function isSolution(state: TreeNode[]): boolean {

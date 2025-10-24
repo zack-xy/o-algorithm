@@ -1,4 +1,4 @@
-package algorithm.链表常见题.合并2个有序链表;
+package algorithm.链表常见题.合并链表;
 
 import dataStructure.链表.ListNode;
 

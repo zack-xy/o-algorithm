@@ -1,9 +1,12 @@
-package algorithm.链表常见题.合并K个链表;
+package algorithm.链表常见题.合并链表;
 
 import dataStructure.链表.ListNode;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
+
+// TODO 链表
+// TODO 分治
+// TODO 堆
 
 /**
  * [LCR 078. 合并 K 个升序链表](https://leetcode.cn/problems/vvXgSW/description/)
@@ -11,7 +14,7 @@ import java.util.PriorityQueue;
  * 
  */
 
-public class mergeKLists {
+public class Leetcode23 {
 
     // 解法一：循环合并2个链表
     public ListNode mergeKLists(ListNode[] lists) {
